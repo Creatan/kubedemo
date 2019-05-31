@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wunderdog Movie Database</title>
+</head>
+<body>
+  <form action="/" method="post">
+    <label for="name"></label>
+    <input type="text" name="name" id="">
+    <label for="year"></label>
+    <input type="text" name="year" id="">
+    <label for="director"></label>
+    <input type="text" name="director" id="">
+    <button type="submit">Save</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Year</td>
+        <td>Director</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% movies.forEach(movie => {%>
+        <tr>
+          <td><%= movie.name %></td>
+          <td><%= movie.year %></td>
+          <td><%= movie.director%></td>
+        </tr>
+      <%})%>
+    </tbody>
+  </table>
+</body>
+</html>
